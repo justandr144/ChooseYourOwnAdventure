@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2BC572E5-A0BE-4BEA-B7A9-D156249FCAD5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ChooseYourOwnAdventure</RootNamespace>
+    <AssemblyName>ChooseYourOwnAdventure</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\europeforest.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cabin1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Castle.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThroneRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\werewolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\villager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\royalKnight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemyKilled.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameOver.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scream.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\victory.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battleStart.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forestSounds.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\93e0d29a4891d31dae5e0aedbb7d5dff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\205561367.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest-lake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waterMonster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\801_Inside Catawba Tribal Shack.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
