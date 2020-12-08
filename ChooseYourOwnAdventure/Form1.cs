@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 
+//Justin Andrews
+//December 8 2020
+//Choose your own adventure
 namespace ChooseYourOwnAdventure
 {
     public partial class Form1 : Form
@@ -33,7 +36,7 @@ namespace ChooseYourOwnAdventure
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.B)
+            if (e.KeyCode == Keys.B)        //On B press changing scenes
             {
                 switch (scene)
                 {
@@ -116,7 +119,7 @@ namespace ChooseYourOwnAdventure
                 }
             }
 
-            else if (e.KeyCode == Keys.N)
+            else if (e.KeyCode == Keys.N)       //On N press change scene
             {
                 switch (scene)
                 {
@@ -187,7 +190,7 @@ namespace ChooseYourOwnAdventure
                         break;
                 }
             }
-            else if (e.KeyCode == Keys.M)
+            else if (e.KeyCode == Keys.M)       //On M press change scene
             {
                 switch (scene)
                 {
@@ -215,14 +218,14 @@ namespace ChooseYourOwnAdventure
                 }
             }
 
-            SoundPlayer battle = new SoundPlayer(Properties.Resources.battleStart);
+            SoundPlayer battle = new SoundPlayer(Properties.Resources.battleStart);         //sounds
             SoundPlayer scream = new SoundPlayer(Properties.Resources.scream);
             SoundPlayer killed = new SoundPlayer(Properties.Resources.enemyKilled);
             SoundPlayer forest = new SoundPlayer(Properties.Resources.forestSounds);
             SoundPlayer lose = new SoundPlayer(Properties.Resources.gameOver);
             SoundPlayer victory = new SoundPlayer(Properties.Resources.victory);
 
-            switch (scene)
+            switch (scene)         //Everything that will be in the scenes
             {
                 case 1:
                     outputLabel.Text = "Welcome to the game!\n\nYou are the child of a wonderful mother and farmer living in a cabin just outside of your village. You have never seen trouble in this small village and te king has recognised your farm as the best in his land";
