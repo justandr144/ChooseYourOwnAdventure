@@ -228,7 +228,7 @@ namespace ChooseYourOwnAdventure
             switch (scene)         //Everything that will be in the scenes
             {
                 case 1:
-                    outputLabel.Text = "Welcome to the game!\n\nYou are the child of a wonderful mother and farmer living in a cabin just outside of your village. You have never seen trouble in this small village and te king has recognised your farm as the best in his land";
+                    outputLabel.Text = "Welcome to the game!\n\nYou are the child of a wonderful mother and farmer living in a cabin just outside of your village. You have never seen trouble in this small village and the king has recognised your farm as the best in his land";
                     outputLabel.Text += "\n\nBut everything is about to change... Because suddenly you wake up to a huge explosion! What do you do?";
 
                     backgroundImage.BackgroundImage = Properties.Resources.Cabin;
@@ -321,6 +321,7 @@ namespace ChooseYourOwnAdventure
                     npc1.Visible = true;
                     npc1.BackgroundImage = Properties.Resources.knight;
                     scene = 97;
+                    redButton.Visible = false;
 
                     goto Lose;
                 case 10:
@@ -328,6 +329,7 @@ namespace ChooseYourOwnAdventure
                     victory.Play();
                     npc1.Visible = true;
                     npc1.BackgroundImage = Properties.Resources.knight;
+                    redButton.Visible = false;
 
                     scene = 98;
                     goto Win;
@@ -336,7 +338,8 @@ namespace ChooseYourOwnAdventure
                     lose.Play();
                     backgroundImage.BackgroundImage = Properties.Resources.mainStreets;
                     scene = 97;
-                    
+                    redButton.Visible = false;
+
                     goto Lose;
                 case 12:
                     outputLabel.Text = "You were ambushed by two werewolves on your way to the castle.\n\nWhat do you do?";
@@ -357,18 +360,22 @@ namespace ChooseYourOwnAdventure
                     outputLabel.Text = "You got destroyed. You didn't even stand a chance.";
                     lose.Play();
                     scene = 97;
+                    redButton.Visible = false;
 
                     goto Lose;
                 case 14:
                     outputLabel.Text = "Did you really just defend against razor sharp claws? You're dead";
                     lose.Play();
                     scene = 97;
+                    redButton.Visible = false;
 
                     goto Lose;
                 case 15:
                     outputLabel.Text = "The were wolves caught you and had themselves a feast.";
                     lose.Play();
                     scene = 97;
+                    yellowButton.Visible = true;
+                    redButton.Visible = false;
 
                     goto Lose;
                 case 16:
@@ -377,6 +384,7 @@ namespace ChooseYourOwnAdventure
                     yellowOutput.Text = "";
                     redOutput.Text = "";
                     redButton.Visible = false;
+                    yellowButton.Visible = false;
 
                     npc1.Visible = false;
                     npc2.Visible = false;
@@ -386,6 +394,7 @@ namespace ChooseYourOwnAdventure
                     forest.Play();
                     blueOutput.Text = "Continue Straight";
                     yellowOutput.Text = "Go to the lake";
+                    yellowButton.Visible = true;
 
                     backgroundImage.BackgroundImage = Properties.Resources.forest;
                     break;
@@ -396,6 +405,7 @@ namespace ChooseYourOwnAdventure
                     backgroundImage.BackgroundImage = Properties.Resources.lake;
                     npc1.Visible = true;
                     npc2.Visible = true;
+                    redButton.Visible = false;
 
                     npc1.BackgroundImage = Properties.Resources.waterMonster;
                     npc2.BackgroundImage = Properties.Resources.waterMonster;
@@ -411,6 +421,7 @@ namespace ChooseYourOwnAdventure
                     outputLabel.Text = "You run towards the shack at full speed, trip, and snap your neck. Great Job.";
                     lose.Play();
                     scene = 97;
+                    redButton.Visible = false;
 
                     goto Lose;
                 case 21:
@@ -423,6 +434,7 @@ namespace ChooseYourOwnAdventure
                     outputLabel.Text = "You suddenly get stabbed through the chest. The owner of the shack wasn't too happy to see you stealing.";
                     lose.Play();
                     scene = 97;
+                    redButton.Visible = false;
 
                     goto Lose;
                 case 23:
@@ -437,11 +449,13 @@ namespace ChooseYourOwnAdventure
                     outputLabel.Text = "You attack and get killed instantly. It was pathetic.";
                     lose.Play();
                     scene = 97;
+                    redButton.Visible = false;
 
                     goto Lose;
                 case 25:
                     outputLabel.Text = "You have a wonderful conversation with the witch. It finalizes with you becoming her apprentice. Everyone in the village died but you're having fun.";
                     scene = 98;
+                    redButton.Visible = false;
 
                     goto Win;
                 case 26:
@@ -500,6 +514,7 @@ namespace ChooseYourOwnAdventure
                     outputLabel.Text = "Your house collapsed and you died. Don't be lazy";
                     lose.Play();
                     scene = 97;
+                    redButton.Visible = false;
 
                     goto Lose;
                 case 33:
@@ -527,6 +542,7 @@ namespace ChooseYourOwnAdventure
                     npc2.BackgroundImage = Properties.Resources.orc;
                     npc1.Visible = false;
                     scene = 97;
+                    redButton.Visible = false;
 
                     goto Lose;
                 case 36:
@@ -536,6 +552,7 @@ namespace ChooseYourOwnAdventure
                     npc1.BackgroundImage = Properties.Resources.knight;
                     npc2.BackgroundImage = Properties.Resources.royalKnight;
                     scene = 98;
+                    redButton.Visible = false;
 
                     goto Win;
                 case 37:
@@ -550,6 +567,7 @@ namespace ChooseYourOwnAdventure
                     outputLabel.Text = "You decide to take the violent approach, with the monsters you charge the castle killing everyone in sight including the king. The monsters rule with an iron fist and you are one of the highest ranked nobles";
                     victory.Play();
                     scene = 98;
+                    redButton.Visible = false;
 
                     backgroundImage.BackgroundImage = Properties.Resources.ThroneRoom;
 
@@ -562,6 +580,7 @@ namespace ChooseYourOwnAdventure
                     backgroundImage.BackgroundImage = Properties.Resources.ThroneRoom;
                     npc1.Visible = true;
                     npc1.BackgroundImage = Properties.Resources.royalKnight;
+                    redButton.Visible = false;
 
                     goto Win;
                 case 97:
