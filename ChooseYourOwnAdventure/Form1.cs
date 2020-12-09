@@ -229,7 +229,7 @@ namespace ChooseYourOwnAdventure
             {
                 case 1:
                     outputLabel.Text = "Welcome to the game!\n\nYou are the child of a wonderful mother and farmer living in a cabin just outside of your village. You have never seen trouble in this small village and the king has recognised your farm as the best in his land";
-                    outputLabel.Text += "\n\nBut everything is about to change... Because suddenly you wake up to a huge explosion! What do you do?";
+                    outputLabel.Text += "\n\nBut everything is about to change... Because suddenly you wake up to a huge explosion!\n\nWhat do you do?";
 
                     backgroundImage.BackgroundImage = Properties.Resources.Cabin;
                     blueOutput.Text = "Get up";
@@ -364,14 +364,14 @@ namespace ChooseYourOwnAdventure
 
                     goto Lose;
                 case 14:
-                    outputLabel.Text = "Did you really just defend against razor sharp claws? You're dead";
+                    outputLabel.Text = "Did you really just defend against razor sharp claws? You're dead.";
                     lose.Play();
                     scene = 97;
                     redButton.Visible = false;
 
                     goto Lose;
                 case 15:
-                    outputLabel.Text = "The were wolves caught you and had themselves a feast.";
+                    outputLabel.Text = "The werewolves caught you and had themselves a feast.";
                     lose.Play();
                     scene = 97;
                     yellowButton.Visible = true;
@@ -399,7 +399,7 @@ namespace ChooseYourOwnAdventure
                     backgroundImage.BackgroundImage = Properties.Resources.forest;
                     break;
                 case 18:
-                    outputLabel.Text = "You were ambushed by creatures in the lake when you got close. You died";
+                    outputLabel.Text = "You were ambushed by creatures in the lake when you got close. You died.";
                     lose.Play();
                     scene = 97;
                     backgroundImage.BackgroundImage = Properties.Resources.lake;
@@ -564,7 +564,7 @@ namespace ChooseYourOwnAdventure
                     npc2.BackgroundImage = Properties.Resources.orc;
                     break;
                 case 38:
-                    outputLabel.Text = "You decide to take the violent approach, with the monsters you charge the castle killing everyone in sight including the king. The monsters rule with an iron fist and you are one of the highest ranked nobles";
+                    outputLabel.Text = "You decide to take the violent approach, with the monsters you charge the castle killing everyone in sight including the king. The monsters rule with an iron fist and you are one of the highest ranked nobles.";
                     victory.Play();
                     scene = 98;
                     redButton.Visible = false;
@@ -573,7 +573,7 @@ namespace ChooseYourOwnAdventure
 
                     goto Win;
                 case 39:
-                    outputLabel.Text = "With the monsters at your side, you take the castle only with the force required. After taking the throne room from the king you tell the humans of the monster oppression and they, like you, side with the monsters. The monsters and humans rule in peace and you are part of the council created.";
+                    outputLabel.Text = "With the monsters at your side, you take the castle only with the force required. After taking the throne room from the king you make an announcement to the humans of the monster oppression and they, like you, side with the monsters. The monsters and humans rule in peace and you are part of the council created.";
                     victory.Play();
                     scene = 98;
 
@@ -583,24 +583,24 @@ namespace ChooseYourOwnAdventure
                     redButton.Visible = false;
 
                     goto Win;
-                case 97:
+                case 97:                //Lose Case
                     Lose:
-                    outputLabel.Text += "\n\nYou Lose, Play Again?";
+                    outputLabel.Text += "\n\nYou Lose. Play Again?";
 
                     blueOutput.Text = "Yes";
                     yellowOutput.Text = "No";
                     break;
-                case 98:
+                case 98:                //Win Case
                     Win:
                     outputLabel.Text += "\n\nYou Win! Play Again?";
 
                     blueOutput.Text = "Yes";
                     yellowOutput.Text = "No";
                     break;
-                case 99:
+                case 99:                //If No Replay
                     outputLabel.Text = "Thanks for Playing!";
                     break;
-                case 100:
+                case 100:               //To avoid errors
                     outputLabel.Text = "That wasn't an option";
                     goto Lose;
                     
