@@ -56,7 +56,7 @@
             this.outputLabel.ForeColor = System.Drawing.Color.White;
             this.outputLabel.Location = new System.Drawing.Point(508, 12);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(474, 365);
+            this.outputLabel.Size = new System.Drawing.Size(474, 293);
             this.outputLabel.TabIndex = 1;
             // 
             // blueLabel
