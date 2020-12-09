@@ -24,8 +24,8 @@ namespace ChooseYourOwnAdventure
         {
             InitializeComponent();
 
-            outputLabel.Text = "Welcome to the game!\n\nYou are the child of a wonderful mother and farmer living in a cabin just outside of your village. You have never seen trouble in this small village and te king has recognised your farm as the best in his land";
-            outputLabel.Text += "\n\nBut everything is about to change... Because suddenly you wake up to a huge explosion! What do you do?";
+            outputLabel.Text = "Welcome to the game!\n\nYou are the child of a wonderful mother and farmer living in a cabin just outside of your village. You have never seen trouble in this small village and the king has recognised your farm as the best in his land";
+            outputLabel.Text += "\n\nBut everything is about to change... Because suddenly you wake up to a huge explosion!\n\nWhat do you do?";
 
             blueOutput.Text = "Get up";
             yellowOutput.Text = "Go back to sleep";
@@ -361,6 +361,7 @@ namespace ChooseYourOwnAdventure
                     lose.Play();
                     scene = 97;
                     redButton.Visible = false;
+                    redOutput.Text = "";
 
                     goto Lose;
                 case 14:
@@ -368,6 +369,7 @@ namespace ChooseYourOwnAdventure
                     lose.Play();
                     scene = 97;
                     redButton.Visible = false;
+                    redOutput.Text = "";
 
                     goto Lose;
                 case 15:
@@ -376,6 +378,7 @@ namespace ChooseYourOwnAdventure
                     scene = 97;
                     yellowButton.Visible = true;
                     redButton.Visible = false;
+                    redOutput.Text = "";
 
                     goto Lose;
                 case 16:
@@ -511,7 +514,7 @@ namespace ChooseYourOwnAdventure
                     redButton.Visible = false;
                     break;
                 case 32:
-                    outputLabel.Text = "Your house collapsed and you died. Don't be lazy";
+                    outputLabel.Text = "Your house collapsed and you died. Don't be lazy.";
                     lose.Play();
                     scene = 97;
                     redButton.Visible = false;
